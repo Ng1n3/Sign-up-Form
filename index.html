@@ -9,40 +9,52 @@
 </head>
 <body>
     <div class="container">
-        <div class="first-half">
-            <h1 class="logo">Code.Learn</h1>
-            <p>We are your one stop learning center for learning, understanding and mastering programming skills. Signup Now to get started.</p>
-            <img src="images/source.png" alt="source" class="source">
+        <div class="side-A">
+            <div class="first-half">
+                <h1 class="logo"> <span class="bracket red"><</span> <span class="blue">Code</span><span class="red"> .Learn</span><span class="bracket blue">/></span></h1>
+                <p class="logo-paragraph">We are your one-stop shop for learning, comprehending, and mastering programming skills. To get started, register now!</p>
+                <img src="images/source.png" alt="source" class="source">
+            </div>
         </div>
-        <div class="details">
-            <p class="intro">
-                START FOR FREE
-            </p>
-            <h1>Sign Up to Code.Learn</h1>
-            <p class="member">Already a member? <span class="member-highlighted"><a href="#">Log in</a></span></p>
-            <section>
-                <fieldset>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input type="email" placeholder="name@gmail.com">
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input type="password" class="password" aria-placeholder="6+characters, 1 Capital letter">
-                    </div>
-                    <div>
-                        <label for="re-password">re-enter Password</label>
-                        <input type="password" class="password re-password" aria-placeholder="6+characters, 1 Capital letter">
-                    </div>
-                    <div>
-                        <button class="submit">Create an account</button>
-                    </div>
-                    <div>
-                        <button class="submit">Sign up with Google</button>
-                    </div>
-                </fieldset>
-
-            </section>
+        <div class="side-B">
+            <div class="details">
+                <p class="intro">
+                    START FOR FREE
+                </p>
+                <h1>Sign Up to <span class="logo"> <span class="blue">Code</span><span class="red">.Learn</span></h1>
+                <p class="member">Already a member? <span class="member-highlighted"><a href="#">Log in</a></span></p>
+                <section>
+                    <form>
+                        <div class="input">
+                            <label for="email">E-mail</label> <br>
+                            <input type="email" placeholder="name@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        </div>
+                        <div class="input">
+                            <label for="password">Password</label><br>
+                            <input type="password" class="password" placeholder="6+characters, 1 Capital letter" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                        </div>
+                        <div class="input">
+                            <label for="re-password">re-enter Password</label> <br>
+                            <input type="password" class="password re-password" placeholder="Re-enter password" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="submit" class="submit">Create an account</button>
+                        </div>
+                        <div class="sign-up"> 
+                            <img src="images/google.png" alt="google" class="google">
+                            <p>Sign up with Google</p>
+                        
+                        </div>
+                    </form>
+                </section>
+                <div id="message">
+                    <h2>Password must contain the following</h2>
+                    <p id="letter" class="invalid">A <b>lowercase</b>letter</p>
+                    <p id="capital" class="invalid">A <b>Capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

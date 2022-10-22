@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+:root {
+    --logo-red: #EE4B2B;
+    --logo-blue: #008080;
+    --text-grey: #7393B3;
+    --text-dark-grey: #36454F;
+
+    /*font-weight*/
+    --first-level: 300;
+    --second-level: 500;
+    --third-level: 600;
+    --fourth-level: 700;
+
+    /*font-sizes*/
+    --headings-level: 40px;
+    --heading-level-2: 35px;
+    --subheading-level1: 25px;
+    --subheading-level2: 20px;
+    --subheading-level3: 18px;
+    --subheading-level4: 15px;
+    --button-level: 18px;
+    --button-level2: 20px;
+
+
+
+
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+width: min(600px, 100%);
+}
+
+img.source {
+    margin-top: 20px;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.logo {
+    font-size: var(--headings-level);
+}
+
+h1 .blue {
+    color: var(--logo-blue);
+}
+
+h1 .red {
+    color: var(--logo-red);
+}
+
+h1 .bracket {
+    font-size: 35px;
+    font-weight: 500;
+
+}
+
+.logo-paragraph {
+    margin-top: 10px;
+    font-size: clamp(18px, 70%);
+    width: min(450px, 100%);
+    color: var(--text-grey);
+    font-weight: var(--second-level)
+}
+
+.side-A{
+    width: min(700px, 100%);
+}
+
+.member-highlighted a {
+    text-decoration: none;
+    color: var(--logo-red);
+    font-size: var(--subheading-level3);
+    font-weight: var(--fourth-level);
+}
+
+.side-B {
+    margin-top: 70px;
+}
+
+
+.intro, .member {
+    font-size: var(--subheading-level4);
+    color: var(--text-grey);
+    font-weight: var(--third-level);
+}
+
+label {
+    color: var(--text-grey);
+    font-size: var(--subheading-level3);
+    font-weight: var(--fourth-level);
+    margin-top: 50px;
+}
+
+.input {
+    margin-top: 15px;
+}
+
+input {
+    height: 45px;
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--logo-blue);
+    margin-top: 7px;
+}
+
+input:focus,
+input:active {
+    border: none;
+    box-shadow: 2px 2px 15px var(--logo-blue);
+}
+
+button {
+    margin-top: 25px;
+    width: 400px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--logo-blue);
+    color: white;
+    font-size: var(--button-level);
+}
+
+button:hover {
+    cursor: pointer;
+    font-size: var(--button-level2);
+    box-shadow: 5px 10px 10px darkgray
+    font-weight: var(--third-level);
+    
+}
+
+.sign-up {
+    margin-top: 25px;
+    display: flex;
+    justify-content:center;
+    gap: 30px;
+    width: 400px;
+    border-radius: 8px;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1px solid var(--logo-blue)
+}
+
+.sign-up:hover {
+    cursor: pointer;
+    box-shadow: 2px 5px 15px darkgray;
+}
+
+.google {
+    width: 24px;
+    height:24px;
+}
+
+#message {
+    margin-top: 30px;
+    border: 1px solid var(--logo-red);
+    padding:  30px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: var(--subheading-level2);
+    color: var(--logo-red);
+}
+
+.invalid {
+    color: darkgray;
+    font-weight: var(--first-level);
+    margin-top: 8px;
+
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
