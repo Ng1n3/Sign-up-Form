@@ -273,7 +273,7 @@ and (max-width: 640px) {
 
     .logo {
         font-size: 22px;
-        width: 80px;
+        width: 100%
         margin: 0 auto;
     }
 
@@ -285,8 +285,9 @@ and (max-width: 640px) {
     .logo-paragraph {
         text-align: center;
         margin: 20px auto;
+        padding: 10px;
         font-size: 13px;
-        width: min(200px, 100%);
+        width: min(300px, 100%);
         color: var(--text-grey);
         font-weight: var(--second-level)
     }
@@ -303,7 +304,7 @@ and (max-width: 640px) {
 
     img,
     picture {
-    width: min(280px, 100%);
+    width: min(300px, 100%);
     
 }
 
@@ -336,7 +337,7 @@ label {
 
     input {
         height: 30px;
-        width: 200px;
+        width: 300px;
         padding: 5px 10px;
         border-radius: 3px;
         border: 1px solid var(--logo-blue);
@@ -345,8 +346,9 @@ label {
 }
 
 button {
-    margin-top: 25px;
-    width: 200px;
+    margin: 25px auto; 
+    align-self: center;
+    width: 300px;
     height: 30px;
     border-radius: 5px;
     border: none;
@@ -369,7 +371,7 @@ button:hover {
     display: flex;
     justify-content:center;
     gap: 10px;
-    width: 200px;
+    width: 300px;
     border-radius: 5px;
     height: 35px;
     padding: 10px;
