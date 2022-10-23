@@ -355,6 +355,14 @@ button {
     font-size: 13px;
 }
 
+button:hover {
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 5px 10px 10px darkgray;
+    font-weight: var(--third-level);
+    
+}
+
 
 .sign-up {
     margin-top: 25px;
