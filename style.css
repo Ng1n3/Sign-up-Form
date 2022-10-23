@@ -21,30 +21,17 @@
     --subheading-level4: 15px;
     --button-level: 18px;
     --button-level2: 20px;
-
-
-
-
+    --small-size-subheading: 15px;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
 
 .container {
     margin: 40px auto;
@@ -135,7 +122,9 @@ h1 .bracket {
 }
 
 .side-B {
+    width: min(550px, 100%);
     margin-top: 70px;
+    padding: 20px
 }
 
 
@@ -185,7 +174,7 @@ button {
 button:hover {
     cursor: pointer;
     font-size: var(--button-level2);
-    box-shadow: 5px 10px 10px darkgray
+    box-shadow: 5px 10px 10px darkgray;
     font-weight: var(--third-level);
     
 }
@@ -213,10 +202,12 @@ button:hover {
 }
 
 #message {
+    display: none; 
     margin-top: 30px;
     border: 1px solid var(--logo-red);
     padding:  30px;
     border-radius: 10px;
+    position: relative;
 }
 
 h2 {
@@ -224,19 +215,35 @@ h2 {
     color: var(--logo-red);
 }
 
+#message p {
+    padding: 5px 35px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: absolute;
+    left: 35px;
+    content: '✔';
+}
+
 .invalid {
     color: darkgray;
     font-weight: var(--first-level);
     margin-top: 8px;
-
 }
 
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
+.invalid:before {
+    position: absolute;
+    left: 35px;
+    content: '✖';
+}
+
+
+
   
   *,
   *::before,
@@ -246,4 +253,167 @@ h2 {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+
+@media only screen 
+and (min-width: 360px) 
+and (max-width: 640px) {
+
+
+
+    .container {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    .logo {
+        font-size: 22px;
+        width: 80px;
+        margin: 0 auto;
+    }
+
+    h1 .bracket {
+        font-size: var(--subheading-level3);
+        font-weight: 500;
+    }
+    
+    .logo-paragraph {
+        text-align: center;
+        margin: 20px auto;
+        font-size: 13px;
+        width: min(200px, 100%);
+        color: var(--text-grey);
+        font-weight: var(--second-level)
+    }
+
+    .side-A{
+        width: 300px;
+        justify-self: center;
+    }
+
+    .side-B {
+        width: 300px;
+    }
+
+    img,
+    picture {
+    width: min(280px, 100%);
+    
+}
+
+.details {
+    margin: 0 auto;
+
+}
+
+.intro, .member {
+    font-size: 10px;
+    color: var(--text-grey);
+    font-weight: var(--third-level);
+}
+
+.details > h1 {
+    font-size: 20px;
+}
+
+.member-highlighted > a {
+    font-size: 13px;
+}
+
+label {
+    font-size: 15px;
+}
+
+    input {
+        height: 30px;
+        width: 200px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        border: 1px solid var(--logo-blue);
+        margin-top: 7px;
+        font-size: 11px;
+}
+
+button {
+    margin-top: 25px;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--logo-blue);
+    color: white;
+    font-size: 13px;
+}
+
+
+.sign-up {
+    margin-top: 25px;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    width: 200px;
+    border-radius: 5px;
+    height: 35px;
+    padding: 10px;
+    border: 1px solid var(--logo-blue)
+}
+
+.sign-up > p {
+    font-size: 10px;
+}
+
+.sign-up > img {
+    width: 15px;
+    height: 15px;
+}
+
+#message {
+    display: none; 
+    width: 200px;
+    margin-top: 20px;
+    border: 1px solid var(--logo-red);
+    padding:  10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#message > h2 {
+    font-size: 15px;
+    color: var(--logo-red);
+}
+
+#message p {
+    padding: 5px 25px;
+    font-size: 10px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: absolute;
+    left: 18px;
+    content: '✔';
+}
+
+.invalid {
+    color: darkgray;
+    font-weight: var(--first-level);
+    margin-top: 8px;
+}
+
+
+.invalid:before {
+    position: absolute;
+    left: 18px;
+    content: '✖';
+}
+
+ 
 }

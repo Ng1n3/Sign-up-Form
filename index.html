@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Sign Up</title>
 </head>
 <body>
     <div class="container">
         <div class="side-A">
-            <div class="first-half">
                 <h1 class="logo"> <span class="bracket red"><</span> <span class="blue">Code</span><span class="red"> .Learn</span><span class="bracket blue">/></span></h1>
                 <p class="logo-paragraph">We are your one-stop shop for learning, comprehending, and mastering programming skills. To get started, register now!</p>
                 <img src="images/source.png" alt="source" class="source">
-            </div>
         </div>
         <div class="side-B">
             <div class="details">
@@ -31,11 +30,12 @@
                         </div>
                         <div class="input">
                             <label for="password">Password</label><br>
-                            <input type="password" class="password" placeholder="6+characters, 1 Capital letter" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                            <input type="password" class="password" id="pswd" placeholder="6+characters, 1 Capital letter" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                         </div>
                         <div class="input">
                             <label for="re-password">re-enter Password</label> <br>
-                            <input type="password" class="password re-password" placeholder="Re-enter password" required>
+                            <input type="password" class="re-password" 
+                            id="confirmPassword" placeholder="Re-enter password" required>
                         </div>
                         <div>
                             <button type="submit" class="submit" class="submit">Create an account</button>
