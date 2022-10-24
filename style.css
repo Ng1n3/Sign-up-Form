@@ -295,10 +295,10 @@ and (max-width: 640px) {
         text-align: center;
         margin: 20px auto;
         padding: 10px;
-        font-size: 13px;
+        font-size: 15px;
         width: min(350px, 100%);
         color: var(--text-grey);
-        font-weight: var(--second-level)
+        font-weight: var(--third-level)
     }
 
     .side-A{
