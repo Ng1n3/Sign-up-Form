@@ -176,7 +176,6 @@ button:hover {
     font-size: var(--button-level2);
     box-shadow: 5px 10px 10px darkgray;
     font-weight: var(--third-level);
-    
 }
 
 .sign-up {
@@ -266,10 +265,13 @@ h2 {
 and (min-width: 360px) 
 and (max-width: 640px) {
 
-
-
+    body {
+        margin: 0;
+        padding: 0;
+    }
     .container {
         padding: 0;
+        margin-top: 20px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -279,14 +281,14 @@ and (max-width: 640px) {
 
 
     .logo {
-        font-size: 22px;
-        width: 100%
+        font-size: 30px;
+        width: 100%;
         margin: 0 auto;
     }
 
     h1 .bracket {
-        font-size: var(--subheading-level3);
-        font-weight: 500;
+        font-size: 25px;
+        font-weight: 600;
     }
     
     .logo-paragraph {
@@ -294,7 +296,7 @@ and (max-width: 640px) {
         margin: 20px auto;
         padding: 10px;
         font-size: 13px;
-        width: min(300px, 100%);
+        width: min(350px, 100%);
         color: var(--text-grey);
         font-weight: var(--second-level)
     }
@@ -311,7 +313,7 @@ and (max-width: 640px) {
 
     img,
     picture {
-    width: min(300px, 100%);
+    width: min(350px, 100%);
     
 }
 
@@ -325,7 +327,7 @@ and (max-width: 640px) {
 }
 
 .intro, .member {
-    font-size: 10px;
+    font-size: 15px;
     color: var(--text-grey);
     font-weight: var(--third-level);
 }
@@ -339,32 +341,33 @@ and (max-width: 640px) {
 }
 
 label {
-    font-size: 15px;
+    font-size: 18px;
 }
 
     input {
-        height: 30px;
+        height: 40px;
         width: 300px;
         padding: 5px 10px;
         border-radius: 3px;
         border: 1px solid var(--logo-blue);
         margin-top: 7px;
-        font-size: 11px;
+        font-size: 15px;
 }
 
 button {
     margin: 25px auto; 
     align-self: center;
     width: 300px;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     background-color: var(--logo-blue);
     color: white;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 button:hover {
+    margin-top: 15px;
     cursor: pointer;
     font-size: 15px;
     box-shadow: 5px 10px 10px darkgray;
@@ -380,18 +383,18 @@ button:hover {
     gap: 10px;
     width: 300px;
     border-radius: 5px;
-    height: 35px;
+    height: 45px;
     padding: 10px;
     border: 1px solid var(--logo-blue)
 }
 
 .sign-up > p {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .sign-up > img {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
 }
 
 #message {

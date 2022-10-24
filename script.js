@@ -3,6 +3,7 @@ const capital = document.getElementById('capital');
 const number = document.getElementById('number');
 const length = document.getElementById('length');
 const myInput = document.getElementById('pswd');
+const form = document.getElementById('form');
 
 //when user clicks on the password field, show the message box
 myInput.onfocus = () => {
@@ -58,17 +59,32 @@ myInput.onkeyup = () => {
 
 
 }
-function checkPassword() {
-    let confirmPassword = document.getElementById('confirmPassword').value;
-    let password = myInput.value;
-    console.log(password,confirmPassword);
-    let message = document.getElementById('password-message')
 
-    if(password.length != 0) {
-        if(password == confirmPassword) {
-            message.textContent = 'password Matched';
-        }else {
-            message.textContent = 'password do not match'
+
+    const validatePassword = ()=> {
+        let confirmPassword = document.getElementById('confirmPassword').value;
+        console.log("ps validate")
+
+        let password = myInput.value;
+        let message = document.getElementById('password-message')
+    
+
+        if(password.length != 0) {
+            if(password === confirmPassword) {
+                message.textContent = '';
+            }else {
+                message.textContent = 'password do not match'
+            }
+
         }
     }
-}
+
+
+    function psCheck(){
+        let confirmPassword = document.getElementById('confirmPassword').value;
+        
+        if( confirmPassword !== " "){
+            validatePassword();
+        } 
+    } 
+    
