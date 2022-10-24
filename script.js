@@ -56,19 +56,19 @@ myInput.onkeyup = () => {
         length.classList.add('invalid');
     }
 
-}
 
-    let password = myInput.value;
+}
+function checkPassword() {
     let confirmPassword = document.getElementById('confirmPassword').value;
-function validatePassword(){
-const newPassword = confirmPassword.validity;
-if(password != confirmPassword) {
-    confirmPassword.setCustomValidity("Passwords Don't match")
- }else {
-    confirmPassword.setCustomValidity('');
- }
+    let password = myInput.value;
+    console.log(password,confirmPassword);
+    let message = document.getElementById('password-message')
+
+    if(password.length != 0) {
+        if(password == confirmPassword) {
+            message.textContent = 'password Matched';
+        }else {
+            message.textContent = 'password do not match'
+        }
+    }
 }
-
-password.onchange = validatePassword;
-confirmPassword.onkeyup = validatePassword;
-
